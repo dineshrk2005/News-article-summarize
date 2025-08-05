@@ -1,0 +1,143 @@
+/* Custom styles to enhance the Bootstrap theme */
+
+.input-option {
+    border: 2px solid transparent;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: var(--bs-gray-900);
+}
+
+.input-option:hover {
+    border-color: var(--bs-primary);
+    background: var(--bs-gray-800);
+}
+
+.input-option .form-check-input:checked ~ .form-check-label {
+    color: var(--bs-primary);
+}
+
+.input-option .form-check-input:checked {
+    border-color: var(--bs-primary);
+    background-color: var(--bs-primary);
+}
+
+.form-check-input:checked ~ .form-check-label .input-option {
+    border-color: var(--bs-primary);
+    background: var(--bs-gray-800);
+}
+
+.feature-box {
+    padding: 2rem 1rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.summary-content {
+    background: var(--bs-gray-900);
+    border: 1px solid var(--bs-gray-700);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.original-content {
+    background: var(--bs-gray-900);
+    border: 1px solid var(--bs-gray-700);
+    line-height: 1.6;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Loading animation for submit button */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.spinner-border {
+    animation: spin 1s linear infinite;
+}
+
+/* Print styles */
+@media print {
+    .btn, .nav-tabs, .card-header {
+        display: none !important;
+    }
+    
+    .tab-pane {
+        display: block !important;
+    }
+    
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .container {
+        max-width: 100% !important;
+    }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .feature-box {
+        padding: 1rem;
+    }
+    
+    .card-body {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Custom scrollbar for content areas */
+.original-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.original-content::-webkit-scrollbar-track {
+    background: var(--bs-gray-800);
+    border-radius: 3px;
+}
+
+.original-content::-webkit-scrollbar-thumb {
+    background: var(--bs-gray-600);
+    border-radius: 3px;
+}
+
+.original-content::-webkit-scrollbar-thumb:hover {
+    background: var(--bs-gray-500);
+}
+
+/* Enhanced form styling */
+.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--bs-primary), var(--bs-info));
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--bs-info), var(--bs-primary));
+    transform: translateY(-1px);
+}
+
+/* Card hover effects */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
